@@ -75,25 +75,26 @@
 
             if($('.' + opts.baseStyle).is(':visible')) {
               // if it exists, update values
-              console.log('it exists');
-
-              $(this).next("." + opts.baseStyle).addClass($(this).resultStyle).find("span").text(results);
+              $(this).next("." + opts.baseStyle).removeClass().addClass('testresult ' + $(this).resultStyle).find("span").text(results);
             } else {
               // if it doesn't exist, create it
-              console.log('it doesnt exist');
-
               $(this).next("." + opts.baseStyle).remove();
               $(this).after("<span class=\""+opts.baseStyle+"\"><strong>Protection level:</strong><span></span></span>");
-              $(this).next("." + opts.baseStyle).addClass($(this).resultStyle).find("span").text(results);
+              $(this).next("." + opts.baseStyle).removeClass().addClass('testresult ' + $(this).resultStyle).find("span").text(results);
             }
-
 
           }
           else
           {
-            $(this).prev("." + opts.baseStyle).remove();
-            $(this).before("<span class=\""+opts.baseStyle+"\"><span></span></span>");
-            $(this).prev("." + opts.baseStyle).addClass($(this).resultStyle).find("span").text(results);
+            if($('.' + opts.baseStyle).is(':visible')) {
+              // if it exists, update values
+              $(this).prev("." + opts.baseStyle).addClass($(this).resultStyle).find("span").text(results);
+            } else {
+              // if it doesn't exist, create it
+              $(this).prev("." + opts.baseStyle).remove();
+              $(this).before("<span class=\""+opts.baseStyle+"\"><span></span></span>");
+              $(this).prev("." + opts.baseStyle).addClass($(this).resultStyle).find("span").text(results);
+            }
           }
          });
 
