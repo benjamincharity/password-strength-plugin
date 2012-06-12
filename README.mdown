@@ -1,0 +1,7 @@
+# Password Strength Plugin
+
+Based off of Darren Mason's (djmason9@gmail.com) password_strength_plugin.js which was based off of Firas Kassem's original plugin [Password STrength](http://phiras.wordpress.com/2007/04/08/password-strength-meter-a-jquery-plugin/).
+
+My tweaks check to see if the password strength element exists already. If it does, the value is updated without re-injecting the html (this allows for smooth transitions). If the element does not exist, then it is injected with the appropriate values.
+
+**Better docs coming soon.**
