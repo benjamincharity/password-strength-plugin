@@ -3,7 +3,7 @@
  * password_strength_plugin.js
  * Copyright (c) 20010 myPocket technologies (www.mypocket-technologies.com)
 
- * Amended by Benjamin Charity /// http://benjamincharity.com /// @benjamincharity
+ * Amended by Benjamin Charity /// https://github.com/benjamincharity/password-strength-plugin /// http://benjamincharity.com
  * Added if statement to enable value updates rather than re-injecting the html each time. This allows for smooth transitions.
 
  * Permission is hereby granted, free of charge, to any person obtaining a copy
